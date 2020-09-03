@@ -1,7 +1,7 @@
 ﻿
 namespace Bank.Kata.App
 {
-    public class Transaction
+	public class Transaction
 	{
 		public Transaction(string date, int amount)
 		{

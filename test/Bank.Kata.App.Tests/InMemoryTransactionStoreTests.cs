@@ -7,7 +7,7 @@ namespace Bank.Kata.App.Tests
 {
 	[Trait("Category", "Integration")]
 	public class InMemoryTransactionStoreTests
-    {
+	{
 		private const string Today = "10/01/2020";
 
 		private readonly Mock<IClock> clock;
@@ -25,7 +25,7 @@ namespace Bank.Kata.App.Tests
 		{
 			transactionStore.AddDeposit(new Amount(100));
 
-            IReadOnlyList<Transaction> transactions = transactionStore.All;
+			IReadOnlyList<Transaction> transactions = transactionStore.All;
 
 			Check.That(transactions).ContainsExactly(Deposit(Today, 100));
 		}
@@ -35,7 +35,7 @@ namespace Bank.Kata.App.Tests
 		{
 			transactionStore.AddWithdrawal(new Amount(100));
 
-            IReadOnlyList<Transaction> transactions = transactionStore.All;
+			IReadOnlyList<Transaction> transactions = transactionStore.All;
 
 			Check.That(transactions).ContainsExactly(Withdrawal(Today, -100));
 		}

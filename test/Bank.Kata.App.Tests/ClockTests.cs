@@ -6,13 +6,13 @@ namespace Bank.Kata.App.Tests
 {
 	[Trait("Category", "Integration")]
 	public class ClockTests
-    {
+	{
 		[Fact(DisplayName = "Returns today's date in 'dd/MM/yyyy' string format")]
 		public void Clock_TodaysDate_ReturnsFormattedString()
 		{
 			var clock = TestableClock.ForDate(new DateTime(2020, 1, 10));
 
-            string date = clock.TodayAsString();
+			string date = clock.TodayAsString();
 
 			Check.That(date).IsEqualTo("10/01/2020");
 		}

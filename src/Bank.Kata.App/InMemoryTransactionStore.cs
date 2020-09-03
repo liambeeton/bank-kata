@@ -2,15 +2,15 @@
 
 namespace Bank.Kata.App
 {
-    public class InMemoryTransactionStore : ITransactionStore
-    {
+	public class InMemoryTransactionStore : ITransactionStore
+	{
 		private readonly List<Transaction> transactions = new List<Transaction>();
 		private readonly IClock clock;
 
-        public InMemoryTransactionStore(IClock clock)
-        {
-            this.clock = clock;
-        }
+		public InMemoryTransactionStore(IClock clock)
+		{
+			this.clock = clock;
+		}
 
 		public IReadOnlyList<Transaction> All => transactions.AsReadOnly();
 
